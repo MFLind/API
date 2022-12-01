@@ -13,7 +13,10 @@
         fetch("http://ci-swapi.herokuapp.com/api/")
         .then(Response => response.json())
         .then(data => {
-            document.getElementById("content").innerText = data["people"];
+            document.getElementById("content").innerText = data;
+        })
+        .catch ((e) => {
+            console.error("Error: ", e);
         })
     </script>
 </body>
